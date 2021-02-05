@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="10dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:columnCount="3"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:onClick="getStore"
+                    android:id="@+id/korea"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/koreanfood_icon" />
+
+                    <TextView
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="한식" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:onClick="getStore"
+                    android:id="@+id/china"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/chinesfood_icon" />
+
+                    <TextView
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="중식" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:onClick="getStore"
+                    android:id="@+id/japanese"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/japanesfood_icon" />
+
+                    <TextView
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="일식" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:onClick="getStore"
+                    android:id="@+id/latin"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/latinamericanfood_icon" />
+
+                    <TextView
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="남미식" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:onClick="getStore"
+                    android:id="@+id/america"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/westernstylefood_icon" />
+
+                    <TextView
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="양식" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:onClick="getStore"
+                    android:id="@+id/fastfood"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/fastfood_icon" />
+
+                    <TextView
+                        style="@style/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="패스트푸드" />
+                </LinearLayout>
+
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
