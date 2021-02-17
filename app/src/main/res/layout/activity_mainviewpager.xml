@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/rootLinear"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:padding="10dp" />
+        android:padding="10dp"
+        />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/gridLinear"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -29,7 +33,6 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:onClick="getStore"
                     android:id="@+id/korea"
                     android:layout_width="0dp"
                     android:layout_height="180dp"
@@ -37,6 +40,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:id="@+id/koreaimage"
                         style="@style/category"
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
@@ -51,7 +55,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:onClick="getStore"
                     android:id="@+id/china"
                     android:layout_width="0dp"
                     android:layout_height="180dp"
@@ -60,6 +63,7 @@
 
                     <ImageButton
                         style="@style/category"
+                        android:id="@+id/chinaiamge"
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
                         android:background="@android:color/transparent"
@@ -73,7 +77,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:onClick="getStore"
                     android:id="@+id/japanese"
                     android:layout_width="0dp"
                     android:layout_height="180dp"
@@ -82,6 +85,7 @@
 
                     <ImageButton
                         style="@style/category"
+                        android:id="@+id/japaneseimage"
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
                         android:background="@android:color/transparent"
@@ -95,7 +99,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:onClick="getStore"
                     android:id="@+id/latin"
                     android:layout_width="0dp"
                     android:layout_height="180dp"
@@ -104,6 +107,7 @@
 
                     <ImageButton
                         style="@style/category"
+                        android:id="@+id/latiniamge"
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
                         android:background="@android:color/transparent"
@@ -118,7 +122,6 @@
 
 
                 <LinearLayout
-                    android:onClick="getStore"
                     android:id="@+id/america"
                     android:layout_width="0dp"
                     android:layout_height="180dp"
@@ -127,6 +130,7 @@
 
                     <ImageButton
                         style="@style/category"
+                        android:id="@+id/westernimage"
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
                         android:background="@android:color/transparent"
@@ -141,7 +145,6 @@
 
 
                 <LinearLayout
-                    android:onClick="getStore"
                     android:id="@+id/fastfood"
                     android:layout_width="0dp"
                     android:layout_height="180dp"
@@ -150,6 +153,7 @@
 
                     <ImageButton
                         style="@style/category"
+                        android:id="@+id/fastfoodimage"
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
                         android:background="@android:color/transparent"

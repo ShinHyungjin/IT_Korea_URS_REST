@@ -1,0 +1,16 @@
+3차 프로젝트 진행 게시판
+
+02.05(금)
+ ■ 내일 해야 할 일 + 앞으로 해야 할 일
+  - Android
+   1. 메뉴바 만들기(액션바) --> [ 로그아웃, 결제내역, 마이 페이지 ]
+   2. LoginActivity에서 Modal로 회원가입(우선 고민 사진 넣는건 좀 고민많이)
+   3. MainActivity에서 카테고리 눌렀을 때 StoreFragment 전환 이벤트(rest)
+   4. 3번이 됬다면, 해당 Store의 MenuFragment 전환 이벤트
+   5. 4번이 됬다면, 메뉴 클릭시 장바구니(Fragment or Modal or Dialog)
+   6. 5번이 됬다면, 테이블 선택 할 TableFragment 전환 이벤트(1Touch 1Event? or Multi Select?)
+   7. 6번이 됬다면, PaymentFragment 전환 이벤트
+
+  - Spring
+   1. Strore의 테이블 관리, 주문내역 실시간 비동기 갱신 View
+   2. Client의 결제내역, 테이블 실시간 비동기 갱신 View
