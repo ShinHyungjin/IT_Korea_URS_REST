@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.koreait.ursrest.R;
 import com.koreait.ursrest.activity.MainActivity;
 import com.koreait.ursrest.domain.MenuCart;
@@ -95,6 +96,8 @@ public class MenusAdapter extends BaseAdapter {
 
         System.out.println("menuCart_id: "+ menuCart.getMenu_id() + "\tmenu_id : " + menu_id.getText().toString() +"\tmenu_name : " + menuCart.getMenu_name() + "\tposition : " + position + "\tmenusList_price : " + menuCartList.get(position).getMenu_price() +"\tmenus_price : " +menu_price.getText() + "\tStore_id : " + menuCart.getStore_id());
 
+        Glide.with(mainActivity).load("http://192.168.0.71:8888/resources/data/menu/" + menusList.get(position).getMenu_id()+"."+menusList.get(position).getMenu_image()).into(menu_image);
+        
         menu_image.setImageBitmap(menusList.get(position).getBitmap_image());
         menu_id.setText(String.valueOf(menuCart.getMenu_id()));
         store_id.setText(String.valueOf(menuCart.getStore_id()));

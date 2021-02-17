@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.koreait.ursrest.R;
 import com.koreait.ursrest.activity.MainActivity;
 import com.koreait.ursrest.domain.Store;
@@ -80,6 +81,8 @@ public class StoreAdapter extends BaseAdapter {
         String [] arr = store.getStore_location().split(",");
         store_location.setText(arr[1]);
         store_image.setImageBitmap(store.getBitmap_image());
+
+        Glide.with(mainActivity).load("http://192.168.0.71:8888/resources/data/store/" + store.getMember_id()+"M."+store.getStore_image()).into(store_image);
 
         view.setOnClickListener(e-> {
             Log.d(TAG, "Store_id : " + store.getStore_id() + "\tStore_name : " + store.getStore_name());

@@ -54,6 +54,8 @@ public class StoreDAO {
             con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type", "application/json;charset=utf-8");
             con.setDoOutput(true);
+            con.setDoInput(true);
+            con.setUseCaches(false);
             //보낼 데이터 구성
 
             buffr = new BufferedReader(new InputStreamReader(con.getInputStream()));
@@ -97,6 +99,14 @@ public class StoreDAO {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
+        } finally {
+            if(buffr != null) {
+                try {
+                    buffr.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
@@ -105,11 +115,32 @@ public class StoreDAO {
             @Override
             public void run() {
                 try {
+
+
                     URL url = new URL("http://"+ip+":"+port+"/resources/data/store/"+filename);
                     InputStream is = url.openStream();
                     Bitmap bitmap = BitmapFactory.decodeStream(is);
                     store.setBitmap_image(bitmap);
 
+
+                    /*
+                    URL url = new URL("http://"+ip+":"+port+"/resources/data/store/"+filename);
+                    InputStream is = url.openStream();
+
+                    BitmapFactory.Options opts = new BitmapFactory.Options();
+                    // Get bitmap dimensions before reading...
+                    opts.inJustDecodeBounds = true;
+                    BitmapFactory.decodeFile(String.valueOf(url), opts);
+                    int width = opts.outWidth;
+                    int height = opts.outHeight;
+                    int largerSide = Math.max(width, height);
+                    opts.inJustDecodeBounds = false; // This time it's for real!
+                    int sampleSize = 2; // Calculate your sampleSize here
+                    opts.inSampleSize = sampleSize;
+                    Bitmap bmp = BitmapFactory.decodeFile((String.valueOf(url)), opts);
+
+                    store.setBitmap_image(bmp);
+                    */
 
                 } catch (MalformedURLException e) {
                     e.printStackTrace();

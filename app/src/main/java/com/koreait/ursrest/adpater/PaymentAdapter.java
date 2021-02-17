@@ -7,6 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.koreait.ursrest.R;
 import com.koreait.ursrest.activity.MainActivity;
 import com.koreait.ursrest.domain.Receipt;
@@ -68,8 +69,10 @@ public class PaymentAdapter extends BaseAdapter {
         TextView Rstore_location = view.findViewById(R.id.Rstore_location);
         ImageView store_image = view.findViewById(R.id.Rimg);
 
+        Glide.with(mainActivity).load("http://192.168.0.71:8888/resources/data/store/" + store.getMember_id()+"M."+store.getStore_image()).into(store_image);
+
         store_name.setText(store.getStore_name());
-        receipt_date.setText(receipt.getReceipt_regdate());
+        receipt_date.setText(receipt.getReceipt_regdate().substring(0,11));
         total_price.setText(myFormatter.format(receipt.getReceipt_totalamount()));
         Rstore_location.setText(store.getStore_location());
         store_image.setImageBitmap(store.getBitmap_image());

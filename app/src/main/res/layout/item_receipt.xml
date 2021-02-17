@@ -37,9 +37,9 @@
                 android:id="@+id/Rstore_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.9"
                 android:text="가게이름"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:gravity="center|right"
@@ -48,7 +48,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="2021-02-03"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -72,14 +72,14 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:orientation="horizontal">
             <TextView
                 android:id="@+id/Rstore_location"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="위치"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

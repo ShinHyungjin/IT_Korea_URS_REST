@@ -19,7 +19,6 @@
             <TableRow android:orientation="horizontal">
 
                 <Button
-
                     android:id="@+id/t1_1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
