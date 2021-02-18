@@ -43,6 +43,8 @@ import lombok.SneakyThrows;
 
 public class FinalPaymentFragment extends Fragment {
     String TAG = this.getClass().getName();
+    private static final String APPICATION_ID = "Insert Your App ID";
+
     private int stuck = 10;
     public MainActivity mainActivity;
     public FinalPaymentAdapter finalPaymentAdapter;
@@ -73,7 +75,7 @@ public class FinalPaymentFragment extends Fragment {
         pay_menuList.setAdapter(finalPaymentAdapter);
 
         // 초기설정 - 해당 프로젝트(안드로이드)의 application id 값을 설정합니다. 결제와 통계를 위해 꼭 필요합니다.
-        BootpayAnalytics.init(mainActivity, "602379255b2948002151ff45");
+        BootpayAnalytics.init(mainActivity, APPICATION_ID);
 
         //table_seat.setText(tablestr);
 
@@ -141,7 +143,7 @@ public class FinalPaymentFragment extends Fragment {
 
                 //        결제호출
                 Bootpay.init(mainActivity)
-                        .setApplicationId("602379255b2948002151ff45") // 해당 프로젝트(안드로이드)의 application id 값
+                        .setApplicationId(APPICATION_ID) // 해당 프로젝트(안드로이드)의 application id 값
                         .setPG(PG.INICIS) // 결제할 PG 사
                         .setMethod(Method.PHONE) // 결제수단
                         .setName(mainActivity.store_name) // 결제할 상품명

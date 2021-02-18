@@ -33,7 +33,7 @@ import java.util.List;
 
 public class StoreDAO {
     String TAG = this.getClass().getName();
-    String ip="192.168.0.71";
+    private static final String IP = "Insert Your IP!";
     int port = 8888;
     Gson gson = new Gson();
     MainActivity mainActivity;
@@ -49,7 +49,7 @@ public class StoreDAO {
         ArrayList<Store> storeList = new ArrayList<Store>();
 
         try {
-            URL url = new URL("http://" + ip + ":" + port + uri);
+            URL url = new URL("http://" + IP + ":" + port + uri);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type", "application/json;charset=utf-8");
@@ -117,7 +117,7 @@ public class StoreDAO {
                 try {
 
 
-                    URL url = new URL("http://"+ip+":"+port+"/resources/data/store/"+filename);
+                    URL url = new URL("http://"+IP+":"+port+"/resources/data/store/"+filename);
                     InputStream is = url.openStream();
                     Bitmap bitmap = BitmapFactory.decodeStream(is);
                     store.setBitmap_image(bitmap);

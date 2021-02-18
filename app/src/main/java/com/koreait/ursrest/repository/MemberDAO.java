@@ -41,7 +41,7 @@ import javax.security.auth.login.LoginException;
 
 public class MemberDAO {
     String TAG=this.getClass().getName();
-    String ip="192.168.0.71";
+    private static final String IP = "Insert Your IP!";
     int port=8888;
     Gson gson=new Gson();
     LoginActivity loginActivity;
@@ -65,7 +65,7 @@ public class MemberDAO {
         String errorMessage = null;
         int member_id = 0;
         try {
-            URL url = new URL("http://"+ip+":"+port+uri);
+            URL url = new URL("http://"+IP+":"+port+uri);
             HttpURLConnection con = (HttpURLConnection)url.openConnection();
             con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type","application/json;charset=utf-8");
@@ -138,7 +138,7 @@ public class MemberDAO {
         String uri="/rest/member/regist";
         BufferedWriter buffw=null; //서버에 보낼 것이므로...
         try {
-            URL url = new URL("http://"+ip+":"+port+uri);
+            URL url = new URL("http://"+IP+":"+port+uri);
             HttpURLConnection con = (HttpURLConnection)url.openConnection();
             con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type","application/json;charset=utf-8");
@@ -181,7 +181,7 @@ public class MemberDAO {
         Member member = new Member();
 
         try {
-            URL url = new URL("http://" + ip + ":" + port + uri);
+            URL url = new URL("http://" + IP + ":" + port + uri);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type", "application/json;charset=utf-8");
@@ -230,7 +230,7 @@ public class MemberDAO {
         BufferedWriter buffw=null; //데이터 전송용 스트림
 
         try {
-            URL url = new URL("http://"+ip+":"+port+uri);
+            URL url = new URL("http://"+IP+":"+port+uri);
             HttpURLConnection con=(HttpURLConnection) url.openConnection();
             con.setRequestMethod("PUT");
             con.setRequestProperty("Content-Type","application/json;charset=utf-8");
@@ -271,7 +271,7 @@ public class MemberDAO {
 
 
         try {
-            URL url = new URL("http://" + ip + ":" + port + uri);
+            URL url = new URL("http://" + IP + ":" + port + uri);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type", "application/json;charset=utf-8");
@@ -354,7 +354,7 @@ public class MemberDAO {
         BufferedReader buffr=null;
         int result = 0 ;
         try {
-            URL url = new URL("http://"+ip+":"+port+uri);
+            URL url = new URL("http://"+IP+":"+port+uri);
             HttpURLConnection con = (HttpURLConnection)url.openConnection();
             con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type","application/json;charset=utf-8");
@@ -407,7 +407,7 @@ public class MemberDAO {
             @Override
             public void run() {
                 try {
-                    URL url = new URL("http://"+ip+":"+port+"/resources/data/store/"+filename);
+                    URL url = new URL("http://"+IP+":"+port+"/resources/data/store/"+filename);
                     InputStream is = url.openStream();
                     Bitmap bitmap = BitmapFactory.decodeStream(is);
                     store.setBitmap_image(bitmap);

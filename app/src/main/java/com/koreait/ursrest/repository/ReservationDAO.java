@@ -19,7 +19,7 @@ import java.net.URL;
 
 public class ReservationDAO {
     String TAG = this.getClass().getName();
-    String ip="192.168.0.71";
+    private static final String IP = "Insert Your IP!";
     int port = 8888;
     Gson gson = new Gson();
     MainActivity mainActivity;
@@ -34,7 +34,7 @@ public class ReservationDAO {
         BufferedReader buffr = null;
         int receipt_id = 0 ;
         try {
-            URL url = new URL("http://"+ip+":"+port+uri);
+            URL url = new URL("http://"+IP+":"+port+uri);
             HttpURLConnection con = (HttpURLConnection)url.openConnection();
             con.setRequestMethod("POST");
             con.setRequestProperty("Content-Type","application/json;charset=utf-8");
