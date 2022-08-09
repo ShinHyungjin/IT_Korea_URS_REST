@@ -71,7 +71,7 @@
 >>> ![예약자 BootPay](./mdImages/m_bootpay.png)
 
 >> ### 결제 후, 결제목록 조회
->>> ![예약자 결제목록2](./mdImages/m_paymentList2.png)
+>>> ![예약자 결제목록2](./mdImages/m_paymentList_2.png)
 
 >> ### 결제 후, 좌석 조회
 >>> ![예약자 좌석 선택2](./mdImages/m_tableMap2.png)
